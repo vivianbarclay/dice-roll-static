@@ -1,0 +1,24 @@
+<style>
+  nav {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  margin-bottom: 40px;
+  }
+</style>
+
+<nav>
+  <%= link_to "Home", root_path %>
+  <%= link_to "2d6", dice_2_6_path %>
+  <%= link_to "2d10", dice_2_10_path %>
+  <%= link_to "1d20", dice_1_20_path %>
+  <%= link_to "5d4", dice_5_4_path %>
+</nav>
+
+<h1><%= @title %></h1>
+
+<ul>
+  <% @results.each_with_index do |roll, index| %>
+    <li><%= roll %></li>
+  <% end %>
+</ul>
